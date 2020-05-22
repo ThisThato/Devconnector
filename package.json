@@ -4,8 +4,8 @@
   "description": "Social network for developers",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
-    "server": "nodemon"
+    "start": "nodemon",
+    "server": "nodemon server"
   },
   "author": "Thato Motaung",
   "license": "ISC",
