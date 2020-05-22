@@ -1,4 +1,7 @@
 {
   "mongoURI": "mongodb+srv://ThatoMotaung:1234Thato@devconnector-47so8.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "secrettoken"
+  "jwtSecret": "secrettoken",
+  "githubClientID": "38f7f0ee00fb75095fb8",
+  "githubSecret": "92621660ed6db025299140013a7e582ec2b5ca09",
+  "githubToken": "5969aba0fa827ed1d516237ff82792290ee17a5f"
 }
