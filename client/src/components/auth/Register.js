@@ -1,8 +1,13 @@
 import React, { Fragment, useState } from "react";
+import { connect } from "react-redux";
+import { setAlert } from "../../actions/alert";
+import { register } from "../../actions/auth"; //Used for authentication && communicates with the backend, sends the payload
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
 // import axios from "axios";
 
-export const Register = () => {
+export const Register = ({ setAlert, register }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,9 +27,11 @@ export const Register = () => {
     e.preventDefault();
 
     if (password !== password2) {
-      console.log("Passwords do not match");
+      //Mesage and Alert type defined in actions/Alert - The Alert method
+      setAlert("Passwords do not match", "danger", 4000);
     } else {
-      console.log("SUCCESS");
+      register({ name, email, password });
+      // console.log("SUCCESS");
 
       //   const newUser = {
       //     name,
@@ -62,7 +69,7 @@ export const Register = () => {
             placeholder='Name'
             name='name'
             value={name}
-            required
+            // required
             onChange={(e) => onChange(e)}
           />
         </div>
@@ -72,7 +79,7 @@ export const Register = () => {
             placeholder='Email Address'
             name='email'
             value={email}
-            required
+            // required
             onChange={(e) => onChange(e)}
           />
           <small className='form-text'>
@@ -87,7 +94,7 @@ export const Register = () => {
             name='password'
             minLength='6'
             value={password}
-            required
+            // required
             onChange={(e) => onChange(e)}
           />
         </div>
@@ -98,7 +105,7 @@ export const Register = () => {
             name='password2'
             minLength='6'
             value={password2}
-            required
+            // required
             onChange={(e) => onChange(e)}
           />
         </div>
@@ -111,4 +118,9 @@ export const Register = () => {
   );
 };
 
-export default Register;
+Register.propsTypes = {
+  setAlert: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
+};
+
+export default connect(null, { setAlert, register })(Register);
