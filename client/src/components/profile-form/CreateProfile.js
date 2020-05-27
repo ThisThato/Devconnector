@@ -18,9 +18,6 @@ const CreateProfile = (props) => {
     instagram: "",
   });
 
-
-  const [displaySocialInputs, toggleSocialInouts]
-
   const {
     company,
     website,
