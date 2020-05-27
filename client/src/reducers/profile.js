@@ -1,6 +1,6 @@
-import GET_PROFILE from "../actions/types";
-import PROFILE_ERROR from "../actions/types";
-import CLEAR_PROFILE from "../actions/types";
+import { GET_PROFILE } from "../actions/types";
+import { PROFILE_ERROR } from "../actions/types";
+import { CLEAR_PROFILE } from "../actions/types";
 
 const initialState = {
   profile: null,
