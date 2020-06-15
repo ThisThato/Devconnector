@@ -18,7 +18,11 @@ export default function (state = initialState, action) {
 
   switch (type) {
     case GET_PROFILE:
-
+      return {
+        ...state,
+        profile: payload,
+        loading: false,
+      };
     case UPDATE_PROFILE:
       return {
         ...state,
