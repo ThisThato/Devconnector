@@ -1,6 +1,8 @@
 import { GET_PROFILE } from "../actions/types";
+import { GET_PROFILES } from "../actions/types";
 import { PROFILE_ERROR } from "../actions/types";
 import { CLEAR_PROFILE } from "../actions/types";
+import { GET_REPOS } from "../actions/types";
 import { UPDATE_PROFILE } from "../actions/types";
 
 const initialState = {
@@ -16,6 +18,7 @@ export default function (state = initialState, action) {
 
   switch (type) {
     case GET_PROFILE:
+
     case UPDATE_PROFILE:
       return {
         ...state,
@@ -27,6 +30,18 @@ export default function (state = initialState, action) {
         ...state,
         error: payload,
         profile: null,
+        loading: false,
+      };
+    case GET_PROFILES:
+      return {
+        ...state,
+        profiles: payload,
+        loading: false,
+      };
+    case GET_REPOS:
+      return {
+        ...state,
+        profiles: payload,
         loading: false,
       };
     case CLEAR_PROFILE:
