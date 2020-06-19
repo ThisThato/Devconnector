@@ -373,9 +373,9 @@ router.get("/github/:username", async (req, res) => {
       Authorization: `token ${config.get("githubToken")}`,
     };
 
-    const githubResponse = await axios.get(uri, { headers });
+    const gitHubResponse = await axios.get(uri, { headers });
 
-    return res.json(githubResponse.data);
+    return res.json(gitHubResponse.data);
   } catch (err) {
     console.error(err.message);
     return res.status(404).json({ msg: "No Github profile found" });
