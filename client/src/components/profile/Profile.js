@@ -71,9 +71,12 @@ const Profile = ({
                 <h4>No education credentials</h4>
               )}
             </div>
-            {profile.githubusername && (
-              <ProfileGithub username={profile.githubusername} />
-            )}
+            <div className='profile-edu bg-white p-2'>
+              <h2 className='tex-primary'>Github</h2>
+              {profile.githubusername && (
+                <ProfileGithub username={profile.githubusername} />
+              )}
+            </div>
           </div>
         </Fragment>
       )}
