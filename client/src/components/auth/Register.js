@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { connect } from "react-redux";
+import { connect } from "react-redux"; //Provides the Register with the data it needs, isAuthenticated
 import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth"; //Used for authentication && communicates with the backend, sends the payload
 import { Link, Redirect } from "react-router-dom";
@@ -23,6 +23,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
       [e.target.name]: e.target.value,
     });
 
+  //Submits the data to the register action
   const onSubmit = async (e) => {
     e.preventDefault();
 

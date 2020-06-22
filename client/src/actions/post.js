@@ -124,7 +124,7 @@ export const deletePost = (id) => async (dispatch) => {
 };
 
 //Add Comment
-export const addCommnet = (postId, formData) => async (dispatch) => {
+export const addComment = (postId, formData) => async (dispatch) => {
   try {
     const config = {
       headers: {
@@ -157,7 +157,7 @@ export const deleteComment = (postId, commentId) => async (dispatch) => {
 
     dispatch({
       type: REMOVE_COMMENT,
-      payload: postId,
+      payload: commentId,
     });
 
     dispatch(setAlert("Comment Removed", "success"));
