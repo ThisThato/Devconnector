@@ -110,6 +110,13 @@ git merge master
 
 ---
 
+## Preview
+![Annotation 2020-06-22 055928 (2)](https://user-images.githubusercontent.com/39223762/87814977-0e932d80-c865-11ea-9dde-d60ed8b3c067.png)
+![Posts](https://user-images.githubusercontent.com/39223762/87814985-14890e80-c865-11ea-87c2-668d03444a23.jpg)
+![Profile](https://user-images.githubusercontent.com/39223762/87814991-1783ff00-c865-11ea-85bf-e5ed87751cef.jpg)
+![People](https://user-images.githubusercontent.com/39223762/87814998-1a7eef80-c865-11ea-83a9-17f334fba119.jpg)
+
+
 ## App Info
 
 ## Author
